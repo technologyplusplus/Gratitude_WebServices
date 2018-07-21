@@ -55,6 +55,14 @@ namespace WebServicesTests
             Assert.AreEqual("value",contentResult);
         }
 
-
+        [TestMethod]
+        public void TestMethod5()
+        {
+            new Email();
+                
+            // Assert the result  
+            /// Assert.IsNotNull(contentResult);
+            /// Assert.AreEqual("value", contentResult);
+        }
     }
 }

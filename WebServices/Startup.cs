@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.EntityFrameworkCore;
+using WebServices.Models;
 
 
 namespace WebServices
@@ -32,6 +34,9 @@ namespace WebServices
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            services.AddDbContext<WebServicesContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("WebServicesContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
