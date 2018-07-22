@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebServices.Models
 {
-    [Produces("application/json")]
+    //[Produces("application/json", "application/xml")]
     [Route("api/GratitudeLists")]
     public class GratitudeListsController : Controller
     {
