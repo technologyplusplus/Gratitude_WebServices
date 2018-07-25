@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace WebServices.Models
 {
@@ -14,5 +15,10 @@ namespace WebServices.Models
         }
 
         public DbSet<WebServices.Models.GratitudeList> GratitudeList { get; set; }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //optionsBuilder.UseMySQL(Configuration.GetConnectionString("WebServicesContext")));
+        //}
     }
 }
